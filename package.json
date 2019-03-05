@@ -1,0 +1,20 @@
+{
+  "name": "whodoiban-scraper",
+  "version": "1.0.0",
+  "description": "Builds JSON needed by whodoiban-pwa",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "typescript": "^3.3.3"
+  }
+}
