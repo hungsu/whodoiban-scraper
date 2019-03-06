@@ -176,6 +176,7 @@ const heroUrls = [
     "https://www.dotabuff.com/heroes/luna/counters",
     "https://www.dotabuff.com/heroes/lycan/counters",
     "https://www.dotabuff.com/heroes/magnus/counters",
+    "https://www.dotabuff.com/heroes/mars/counters",
     "https://www.dotabuff.com/heroes/medusa/counters",
     "https://www.dotabuff.com/heroes/meepo/counters",
     "https://www.dotabuff.com/heroes/mirana/counters",
@@ -286,10 +287,9 @@ heroUrls.forEach((url, index) => {
 const fs = require('fs');
 Promise.all(promises)
     .then(() => {
-        // console.log(heroes)
+        const fileContent = "export default " + JSON.stringify(heroes)
 
-        // Fails if file doesn't exist
-        fs.writeFile("./dist/heroes.json", JSON.stringify(heroes), function(err) {
+        fs.writeFile("./dist/heroes.js", fileContent, function(err) {
             if(err) {
                 return console.log(err);
             }
